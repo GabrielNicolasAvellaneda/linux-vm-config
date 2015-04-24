@@ -17,7 +17,7 @@ sudo dpkg -i grafana_2.0.0-beta3_amd64.deb
 sudo update-rc.d grafana-server defaults 95 10
 
 # Install the Java JDK
-sudo apt-get install default-jdk
+sudo apt-get install -y default-jdk
 
 # Install and configure HBase
 if ! [ -d /vagrant/hbase ]; then
@@ -29,6 +29,8 @@ fi
 # Install OpenTSDB
 wget -q -nc https://github.com/OpenTSDB/opentsdb/releases/download/v2.1.0RC2/opentsdb-2.1.0RC2_all.deb
 sudo dpkg -i opentsdb-2.1.0RC2_all.deb
+
+sudo apt-get install -y gnuplot
 
 
 #if ! [ -d /vagrant/grafana ]; then
