@@ -2,7 +2,7 @@
 
 sudo apt-get update
 
-sudo apt-get install git
+sudo apt-get install -y git
 
 #sudo apt-get install -y nginx
 #sudo update-rc.d nginx defaults
@@ -21,8 +21,8 @@ sudo apt-get install -y default-jdk
 
 # Install and configure HBase
 if ! [ -d /vagrant/hbase ]; then
-  wget -q -nc http://mirror.nbtelecom.com.br/apache/hbase/stable/hbase-1.0.0-bin.tar.gz
-  tar -xvzf hbase-1.0.0-bin.tar.gz /vagrant/hbase
+  wget -q -nc https://www.apache.org/dist/hbase/hbase-1.0.0/hbase-1.0.0-bin.tar.gz
+  tar -xvzf hbase-1.0.0-bin.tar.gz --directory /vagrant
   # TODO: Configure hbase
 fi
 
