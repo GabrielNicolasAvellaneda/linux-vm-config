@@ -21,7 +21,7 @@ sudo apt-get install -y default-jdk
 
 # Install and configure HBase
 if ! [ -d /vagrant/hbase ]; then
-  wget -q -nc https://www.apache.org/dist/hbase/hbase-1.0.0/hbase-1.0.0-bin.tar.gz
+  wget -q -nc https://www.apache.org/dist/hbase/hbase-1.0.1/hbase-1.0.1-bin.tar.gz
   tar -xvzf hbase-1.0.0-bin.tar.gz --directory /vagrant
   # TODO: Configure hbase
 fi
